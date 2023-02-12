@@ -67,7 +67,7 @@ report_button = (By.CSS_SELECTOR, 'button[data-a-target="report-button-more-butt
 report_translation_button = (By.CSS_SELECTOR, 'button[aria-label="Пожаловаться на трансляцию"]')
 report_other_button = (By.CSS_SELECTOR, 'button[aria-label="Отправить другую жалобу"]')
 searching_field = (By.CSS_SELECTOR, 'input[aria-label="Поисковый запрос"]')
-dreadztv_chanel = (By.CSS_SELECTOR, 'a[href="/dreadztv"]')
+zubarefff_chanel = (By.CSS_SELECTOR, 'a[href="/zubarefff"]')
 collapse_recommended_channels = (By.CSS_SELECTOR, 'button[data-a-target="side-nav-arrow"]')
 side_nav_header_collapsed = (By.CSS_SELECTOR, 'div[data-a-target="side-nav-header-collapsed"]')
 show_more = (By.CSS_SELECTOR, 'button[data-test-selector="ShowMore"]')

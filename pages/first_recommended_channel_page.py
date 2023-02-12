@@ -225,13 +225,13 @@ class FirstRecommendedChannel(BasePage):
     def click_report_other_button(self):
         self.find_element(apl.report_other_button).click()
 
-    def find_dreadztv_channel(self):
+    def find_zubarefff_channel(self):
         search_query = self.find_element(apl.searching_field)
-        search_query.send_keys('dreadztv')
+        search_query.send_keys('zubarefff')
         search_query.send_keys(Keys.ENTER)
 
-    def dreadztv_channel(self):
-        return self.find_element(apl.dreadztv_channel)
+    def zubarefff_channel(self):
+        return self.find_element(apl.zubarefff_channel)
 
     def click_collapse_recommended_channels(self):
         self.find_element(apl.collapse_recommended_channels).click()

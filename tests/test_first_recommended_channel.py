@@ -261,8 +261,8 @@ def test_searching_field(driver):
     home_page.open_page()
     home_page.click_first_recommended_channel()
     first_rec_channel = FirstRecommendedChannel(driver)
-    first_rec_channel.find_dreadztv_channel()
-    assert first_rec_channel.dreadztv_channel().is_displayed()
+    first_rec_channel.find_zubarefff_channel()
+    assert first_rec_channel.zubarefff_channel().is_displayed()
 
 
 def test_collapse_recommended_channels(driver):
