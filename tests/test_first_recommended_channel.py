@@ -29,7 +29,7 @@ def test_theatre_mode_button(driver):
     home_page.click_first_recommended_channel()
     first_rec_channel = FirstRecommendedChannel(driver)
     first_rec_channel.click_theatre_mode_button(driver)
-    assert first_rec_channel.theatre_mode_activated() is True
+    assert first_rec_channel.theatre_mode_activated()
 
 
 def test_full_screen_mode_button(driver):
@@ -38,7 +38,7 @@ def test_full_screen_mode_button(driver):
     home_page.click_first_recommended_channel()
     first_rec_channel = FirstRecommendedChannel(driver)
     first_rec_channel.click_full_screen_button(driver)
-    assert first_rec_channel.full_screen_mode_activated() is True
+    assert first_rec_channel.full_screen_mode_activated()
 
 
 def test_change_video_quality(driver):
