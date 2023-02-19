@@ -84,12 +84,12 @@ class FirstRecommendedChannel(BasePage):
         ActionChains(driver).move_to_element(self.find_element(apl.stream_screen)).click(
             self.find_element(apl.mute_button)).perform()
 
-    def stream_is_muted(self, driver):
+    def stream_is_muted(self):
         try:
-            ActionChains(driver).move_to_element(self.find_element(
-                apl.stream_screen)).click(self.find_element(apl.mute_button)).perform()
-        except NoSuchElementException:
+            self.find_element(apl.mute_button)
             return 'Stream is muted!'
+        except NoSuchElementException:
+            return 'Stream is not muted!'
 
     def click_advanced_button(self):
         self.find_element(apl.advanced_button).click()
@@ -132,7 +132,7 @@ class FirstRecommendedChannel(BasePage):
             self.find_element(apl.theatre_mode_button)).perform()
 
     def open_chat(self):
-        if self.find_element(apl.close_chat_button).is_displayed():
+        if self.find_element(apl.close_chat_button):
             pass
         else:
             self.find_element(apl.open_chat_button).click()
@@ -245,5 +245,5 @@ class FirstRecommendedChannel(BasePage):
     def more_channels(self):
         return self.find_element(apl.show_less)
 
-    def click_logout_button(self):
-        self.find_element(apl.logout_button).click()
+    def click_login_button(self):
+        self.find_element(apl.login_button).click()
