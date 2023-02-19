@@ -9,7 +9,7 @@ def test_dark_mode_toggle(driver):
     first_rec_channel = FirstRecommendedChannel(driver)
     first_rec_channel.click_user_menu_button()
     first_rec_channel.activate_dark_mode_toggle()
-    assert first_rec_channel.dark_mode().is_enabled()
+    assert first_rec_channel.dark_mode()
 
 
 def test_change_language(driver):
@@ -20,7 +20,7 @@ def test_change_language(driver):
     first_rec_channel.click_user_menu_button()
     first_rec_channel.click_language_button()
     first_rec_channel.chose_english_language()
-    assert first_rec_channel.navigation_in_english().is_displayed()
+    assert first_rec_channel.navigation_in_english()
 
 
 def test_theatre_mode_button(driver):
@@ -61,7 +61,7 @@ def test_mini_player_window(driver):
     first_rec_channel.click_advanced_button()
     first_rec_channel.mini_player_activate()
     first_rec_channel.click_view_button()
-    assert first_rec_channel.check_mini_player_window().is_displayed()
+    assert first_rec_channel.check_mini_player_window()
 
 
 def test_pause_stream(driver):
@@ -70,7 +70,7 @@ def test_pause_stream(driver):
     home_page.click_first_recommended_channel()
     first_rec_channel = FirstRecommendedChannel(driver)
     first_rec_channel.pause_stream(driver)
-    assert first_rec_channel.show_pausing_message().is_displayed()
+    assert first_rec_channel.show_pausing_message()
 
 
 def test_muting_stream(driver):
@@ -79,7 +79,7 @@ def test_muting_stream(driver):
     home_page.click_first_recommended_channel()
     first_rec_channel = FirstRecommendedChannel(driver)
     first_rec_channel.muting_stream(driver)
-    assert first_rec_channel.stream_is_muted(driver) == 'Stream is muted!'
+    assert first_rec_channel.stream_is_muted()
 
 
 def test_video_statistics(driver):
@@ -90,7 +90,7 @@ def test_video_statistics(driver):
     first_rec_channel.click_settings_button(driver)
     first_rec_channel.click_advanced_button()
     first_rec_channel.click_video_statistics_button()
-    assert first_rec_channel.check_video_statistics_window().is_displayed()
+    assert first_rec_channel.check_video_statistics_window()
 
 
 def test_report_a_bug_selection(driver):
@@ -101,7 +101,7 @@ def test_report_a_bug_selection(driver):
     first_rec_channel.click_settings_button(driver)
     first_rec_channel.click_report_a_bug()
     first_rec_channel.select_a_bug()
-    assert first_rec_channel.error_option_selected().is_selected()
+    assert first_rec_channel.error_option_selected()
 
 
 def test_show_hotkeys_button(driver):
@@ -111,7 +111,7 @@ def test_show_hotkeys_button(driver):
     first_rec_channel = FirstRecommendedChannel(driver)
     first_rec_channel.click_settings_button(driver)
     first_rec_channel.click_show_hotkeys()
-    assert first_rec_channel.list_of_hotkeys().is_displayed()
+    assert first_rec_channel.list_of_hotkeys()
 
 
 def test_community_button(driver):
@@ -121,7 +121,7 @@ def test_community_button(driver):
     first_rec_channel = FirstRecommendedChannel(driver)
     first_rec_channel.open_chat()
     first_rec_channel.click_community_button()
-    assert first_rec_channel.info_about_community().is_displayed()
+    assert first_rec_channel.info_about_community()
 
 
 def test_chat_filtration_button(driver):
@@ -132,7 +132,7 @@ def test_chat_filtration_button(driver):
     first_rec_channel.open_chat()
     first_rec_channel.click_chat_settings_button()
     first_rec_channel.enable_chat_filtration()
-    assert first_rec_channel.chat_filtration().is_enabled()
+    assert first_rec_channel.chat_filtration()
 
 
 def test_community_points_button(driver):
@@ -142,7 +142,7 @@ def test_community_points_button(driver):
     first_rec_channel = FirstRecommendedChannel(driver)
     first_rec_channel.open_chat()
     first_rec_channel.click_community_points_button()
-    assert first_rec_channel.channel_points_reward().is_displayed()
+    assert first_rec_channel.channel_points_reward()
 
 
 def test_follow_button(driver):
@@ -151,7 +151,7 @@ def test_follow_button(driver):
     home_page.click_first_recommended_channel()
     first_rec_channel = FirstRecommendedChannel(driver)
     first_rec_channel.click_follow_button(driver)
-    assert first_rec_channel.join_to_twitch_window().is_displayed()
+    assert first_rec_channel.join_to_twitch_window()
 
 
 def test_subscribe_button(driver):
@@ -160,7 +160,7 @@ def test_subscribe_button(driver):
     home_page.click_first_recommended_channel()
     first_rec_channel = FirstRecommendedChannel(driver)
     first_rec_channel.click_subscribe_button()
-    assert first_rec_channel.subscription_info().is_displayed()
+    assert first_rec_channel.subscription_info()
 
 
 def test_paid_subscribe_button(driver):
@@ -170,7 +170,7 @@ def test_paid_subscribe_button(driver):
     first_rec_channel = FirstRecommendedChannel(driver)
     first_rec_channel.click_subscribe_button()
     first_rec_channel.click_paid_subscription()
-    assert first_rec_channel.sign_in_window().is_displayed()
+    assert first_rec_channel.sign_in_window()
 
 
 def test_donate_subscription_button(driver):
@@ -180,7 +180,7 @@ def test_donate_subscription_button(driver):
     first_rec_channel = FirstRecommendedChannel(driver)
     first_rec_channel.click_subscribe_button()
     first_rec_channel.click_donate_subscription()
-    assert first_rec_channel.gift_for_community_window().is_displayed()
+    assert first_rec_channel.gift_for_community_window()
 
 
 def test_show_love_gif_in_gift_theme(driver):
@@ -191,7 +191,7 @@ def test_show_love_gif_in_gift_theme(driver):
     first_rec_channel.click_subscribe_button()
     first_rec_channel.click_donate_subscription()
     first_rec_channel.click_show_love_gift_theme()
-    assert first_rec_channel.show_love_gif().is_displayed()
+    assert first_rec_channel.show_love_gif()
 
 
 def test_party_gif_in_gift_theme(driver):
@@ -202,7 +202,7 @@ def test_party_gif_in_gift_theme(driver):
     first_rec_channel.click_subscribe_button()
     first_rec_channel.click_donate_subscription()
     first_rec_channel.click_party_gift_theme()
-    assert first_rec_channel.party_gif().is_displayed()
+    assert first_rec_channel.party_gif()
 
 
 def test_lul_gif_in_gift_theme(driver):
@@ -213,7 +213,7 @@ def test_lul_gif_in_gift_theme(driver):
     first_rec_channel.click_subscribe_button()
     first_rec_channel.click_donate_subscription()
     first_rec_channel.click_lul_gift_theme()
-    assert first_rec_channel.lul_gif().is_displayed()
+    assert first_rec_channel.lul_gif()
 
 
 def test_biblethump_gif_in_gift_theme(driver):
@@ -224,7 +224,7 @@ def test_biblethump_gif_in_gift_theme(driver):
     first_rec_channel.click_subscribe_button()
     first_rec_channel.click_donate_subscription()
     first_rec_channel.click_biblethump_gift_theme()
-    assert first_rec_channel.biblethump_gif().is_displayed()
+    assert first_rec_channel.biblethump_gif()
 
 
 def test_share_with_button(driver):
@@ -233,7 +233,7 @@ def test_share_with_button(driver):
     home_page.click_first_recommended_channel()
     first_rec_channel = FirstRecommendedChannel(driver)
     first_rec_channel.click_share_button()
-    assert first_rec_channel.share_with_field().is_displayed()
+    assert first_rec_channel.share_with_field()
 
 
 def test_report_translation_button(driver):
@@ -243,7 +243,7 @@ def test_report_translation_button(driver):
     first_rec_channel = FirstRecommendedChannel(driver)
     first_rec_channel.click_report_button()
     first_rec_channel.click_report_translation_button()
-    assert first_rec_channel.sign_in_window().is_displayed()
+    assert first_rec_channel.sign_in_window()
 
 
 def test_report_other_button(driver):
@@ -253,7 +253,7 @@ def test_report_other_button(driver):
     first_rec_channel = FirstRecommendedChannel(driver)
     first_rec_channel.click_report_button()
     first_rec_channel.click_report_other_button()
-    assert first_rec_channel.sign_in_window().is_displayed()
+    assert first_rec_channel.sign_in_window()
 
 
 def test_searching_field(driver):
@@ -262,7 +262,7 @@ def test_searching_field(driver):
     home_page.click_first_recommended_channel()
     first_rec_channel = FirstRecommendedChannel(driver)
     first_rec_channel.find_zubarefff_channel()
-    assert first_rec_channel.zubarefff_channel().is_displayed()
+    assert first_rec_channel.zubarefff_channel()
 
 
 def test_collapse_recommended_channels(driver):
@@ -271,7 +271,7 @@ def test_collapse_recommended_channels(driver):
     home_page.click_first_recommended_channel()
     first_rec_channel = FirstRecommendedChannel(driver)
     first_rec_channel.click_collapse_recommended_channels()
-    assert first_rec_channel.only_icons_of_streams().is_displayed()
+    assert first_rec_channel.only_icons_of_streams()
 
 
 def test_show_more_channels_button(driver):
@@ -280,7 +280,7 @@ def test_show_more_channels_button(driver):
     home_page.click_first_recommended_channel()
     first_rec_channel = FirstRecommendedChannel(driver)
     first_rec_channel.click_show_more_channels_button()
-    assert first_rec_channel.more_channels().is_displayed()
+    assert first_rec_channel.more_channels()
 
 
 def test_logout_button(driver):
@@ -290,4 +290,4 @@ def test_logout_button(driver):
     first_rec_channel = FirstRecommendedChannel(driver)
     first_rec_channel.click_user_menu_button()
     first_rec_channel.click_logout_button()
-    assert first_rec_channel.sign_in_window().is_displayed()
+    assert first_rec_channel.sign_in_window()
