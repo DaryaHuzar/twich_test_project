@@ -283,11 +283,11 @@ def test_show_more_channels_button(driver):
     assert first_rec_channel.more_channels()
 
 
-def test_logout_button(driver):
+def test_login_button(driver):
     home_page = HomePage(driver)
     home_page.open_page()
     home_page.click_first_recommended_channel()
     first_rec_channel = FirstRecommendedChannel(driver)
     first_rec_channel.click_user_menu_button()
-    first_rec_channel.click_logout_button()
+    first_rec_channel.click_login_button()
     assert first_rec_channel.sign_in_window()
